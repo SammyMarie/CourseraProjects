@@ -13,8 +13,13 @@ buildscript{
 apply plugin: 'org.sonarqube'
 apply plugin: 'java'
 
+<<<<<<< HEAD
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
+=======
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+>>>>>>> 40c2e48985de1d67a1d0cbb174044e44c04591ba
 
 dependencies {
     testCompile 'junit:junit:4.12'
