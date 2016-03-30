@@ -93,8 +93,7 @@ public class EarthquakeCityMap extends PApplet {
 	// A suggested helper method that takes in an earthquake feature and 
 	// returns a SimplePointMarker for that earthquake
 	// TODO: Implement this method and call it from setUp, if it helps
-	private SimplePointMarker createMarker(PointFeature feature)
-	{
+	private SimplePointMarker createMarker(PointFeature feature){
 		// finish implementing and use this method, if it helps.
 		return new SimplePointMarker(feature.getLocation());
 	}
@@ -108,8 +107,7 @@ public class EarthquakeCityMap extends PApplet {
 
 	// helper method to draw key in GUI
 	// TODO: Implement this method to draw the key
-	private void addKey() 
-	{	
+	private void addKey(){
 		// Remember you can use Processing's graphics methods here
 	
 	}
