@@ -9,7 +9,7 @@ public class MyDisplay extends PApplet {
 
     public void setup(){
         size(600, 600);
-        background(200, 0, 123);
+        background(255, 209, 0);
     }
     public void draw(){
         fill(234, 54, 67);
@@ -22,6 +22,5 @@ public class MyDisplay extends PApplet {
 
         noFill();
         arc(300, 380, 75, 75, 0, PI);
-
     }
 }
