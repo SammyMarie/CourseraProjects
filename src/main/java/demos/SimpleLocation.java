@@ -1,6 +1,8 @@
 package demos;
 
-/** 
+import lombok.AllArgsConstructor;
+
+/**
  * A class to illustrate class design and use.
  * Used in module 2 of the UC San Diego MOOC Object Oriented Programming in Java
  * 
@@ -8,34 +10,24 @@ package demos;
  * 
  *
  */
-public class SimpleLocation
-{
+@AllArgsConstructor
+public class SimpleLocation{
     public double latitude;
     public double longitude;
     
-    public SimpleLocation()
-    {
+    public SimpleLocation()    {
         this.latitude = 32.9;
         this.longitude = -117.2;
     }
-   
-    public SimpleLocation(double latIn, double lonIn)
-    {
-        this.latitude = latIn;
-        this.longitude = lonIn;
-    }
-    
+
     // Returns the distance in km between this SimpleLocation and the 
     // parameter other
-    public double distance(SimpleLocation other)
-    {
+    public double distance(SimpleLocation other){
         return getDist(this.latitude, this.longitude,
                        other.latitude, other.longitude);          
     }
 
-    
-    private double getDist(double lat1, double lon1, double lat2, double lon2)
-    {
+    private double getDist(double lat1, double lon1, double lat2, double lon2){
     	int R = 6373; // radius of the earth in kilometres
     	double lat1rad = Math.toRadians(lat1);
     	double lat2rad = Math.toRadians(lat2);
@@ -50,5 +42,4 @@ public class SimpleLocation
     	double d = R * c;
     	return d;
     }
-   
 }

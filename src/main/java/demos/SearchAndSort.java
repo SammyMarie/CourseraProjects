@@ -18,14 +18,12 @@ import java.util.Random;
 public class SearchAndSort {
 	
 	// Read the airpoirts in from the file.
-	private static ArrayList<Airport> readFile(String fname) throws IOException
-	{
+	private static ArrayList<Airport> readFile(String fname) throws IOException	{
 		ArrayList<Airport> airports = new ArrayList<Airport>();
 		FileInputStream fis = new FileInputStream(fname);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 		String line;
-		while ((line = br.readLine()) != null) 
-		{
+		while ((line = br.readLine()) != null) {
 			String[] data = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
 			for (int i = 0; i < data.length; i++) {
 				data[i] = data[i].replace("\"", "");
@@ -51,8 +49,7 @@ public class SearchAndSort {
 	
 	// Linear search for the airport code
 	public static String findAirportCode(String toFind, 
-			ArrayList<Airport> airports)
-	{
+			ArrayList<Airport> airports){
 		int index = 0;
 		while (index < airports.size()) {
 			if (toFind.equals(airports.get(index).getCity())) {
@@ -84,8 +81,7 @@ public class SearchAndSort {
 	}
 	
 	/** Sort an array of ints using Selection Sort */
-	public static void selectionSort( int[] vals )    
-	{
+	public static void selectionSort( int[] vals ) {
 		int minI;
 
 		for ( int i=0; i < vals.length-1 ; i++ ) {
@@ -99,12 +95,9 @@ public class SearchAndSort {
 			
 			swap(vals, minI, i);
 		}
-		
 	}
 
-	
-	private static void swap(int[] vals, int ind1, int ind2)
-	{
+	private static void swap(int[] vals, int ind1, int ind2){
 		int temp = vals[ind1];
 		vals[ind1] = vals[ind2];
 		vals[ind2] = temp;
@@ -123,9 +116,7 @@ public class SearchAndSort {
 		  }
 		}
 
-	
-	public static void main(String[] args) throws IOException
-	{
+	public static void main(String[] args) throws IOException {
 		String datafile = "data/airports.dat";
 		ArrayList<Airport> airports = readFile(datafile);
 		System.out.println(findAirportCode("Beijing", airports));
@@ -133,8 +124,7 @@ public class SearchAndSort {
 		int[] vals = new int[20];
 		Random r = new Random();
 		System.out.println("Unsorted ints are...");
-		for (int i = 0; i < vals.length; i++) 
-		{
+		for (int i = 0; i < vals.length; i++) {
 			vals[i] = r.nextInt(100);  // Randomly generated int less than 100
 			System.out.print(vals[i] + " ");
 		}
@@ -143,11 +133,8 @@ public class SearchAndSort {
 		mysterySort(vals);
 		//selectionSort(vals);
 		
-		for (int i = 0; i < vals.length; i++) 
-		{
+		for (int i = 0; i < vals.length; i++) {
 			System.out.print(vals[i] + " ");
 		}
-		
-		
 	}
 }

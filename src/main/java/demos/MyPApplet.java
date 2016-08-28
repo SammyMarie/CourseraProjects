@@ -52,5 +52,3 @@ public class MyPApplet extends PApplet{
 		PApplet.main(new String[] {"--present", "MyPApplet"});
 	}
 }
-
-

@@ -6,19 +6,16 @@ package demos;
  * @author UC San Diego Intermediate Software Development MOOC team
  * 
  */
-public class Student extends Person
-{
+public class Student extends Person {
 	public Student(String name)  {
 		super(name);
 	}
 
-	public boolean isAsleep( int hr ) // override 
-	{ 
+	public boolean isAsleep( int hr ) {// override
 		return 2 < hr && 8 > hr; 
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
 		Person p;
 		p = new Student("Sally");
 		p.status(1);

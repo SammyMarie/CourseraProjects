@@ -37,6 +37,7 @@ public class Airport {
 		this.dst = dst;
 		this.dbTimezone = dbTimezone;
 	}
+
 	public int getAirportID() {
 		return airportID;
 	}
@@ -73,7 +74,4 @@ public class Airport {
 	public String getDbTimezone() {
 		return dbTimezone;
 	}
-	
-	
-	
 }
